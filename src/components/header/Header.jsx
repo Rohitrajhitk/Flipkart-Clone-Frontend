@@ -7,7 +7,6 @@ import { makeStyles } from "@material-ui/core";
 import Search from "./Search";
 import CustomButtons from "./CustomButtons";
 
-
 const useStyled = makeStyles((theme) => ({
     root: {
         backgroundColor: "#2874f0",

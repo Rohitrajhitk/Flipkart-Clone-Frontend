@@ -1,7 +1,7 @@
-
 import {InputBase , Box}  from "@mui/material";
 import { makeStyles } from "@material-ui/core";
 import SearchIcon from "@mui/icons-material/Search";
+
 const useStyled = makeStyles ({
     box: {        
         marginLeft: "1%",
