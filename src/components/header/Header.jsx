@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core";
 //component
 import Search from "./Search";
 import CustomButtons from "./CustomButtons";
+import { Link } from "react-router-dom";
 
 const useStyled = makeStyles((theme) => ({
     root: {
@@ -39,7 +40,8 @@ const Header = () => {
     return (
         <AppBar className="classes.root" >
             <Toolbar style={{ minHeight: "55px" }}>
-                <Box  style = {{marginLeft : "12%" , lineHeight : "0"}}>
+                <Link to = '/' style={{marginLeft : "15%" , textDecoration : "none" , color : "inherit"}}>
+                <Box  style = {{marginLeft : "" , lineHeight : "0"}}>
                     <img src={logoURL} style={{ width: 75 }} />
                     <Box style={{ display: "flex" }}>
                         <Typography className="classes.typo" style={{ fontSize: 10 }}>
@@ -51,10 +53,12 @@ const Header = () => {
                         <PlusImage src={subURL} alt="Plus" />
                     </Box>
                 </Box>
+                </Link>
                 <Search />
                 <Box style = {buttonWrapper}>
                     <CustomButtons />
                 </Box>
+               
             </Toolbar>
         </AppBar>
     );

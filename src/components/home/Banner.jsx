@@ -39,7 +39,7 @@ export default function Banner() {
       draggable={false}
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={2000}
+      autoPlaySpeed={4000}
       keyBoardControl={true}
       slidesToSlide={1}
       containerClass="carousel-container"

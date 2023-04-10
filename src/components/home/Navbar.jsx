@@ -1,12 +1,18 @@
 
 import {Box, Typography} from "@mui/material"; 
 import { navData } from "../../constants/Data";
+import { makeStyles } from "@material-ui/core";
 
-const component = {
-    display : "flex",
-    margin : "55px 130px 0 130px",
-    justifyContent : "space-between",
-}
+const useStyles = makeStyles(theme=>({
+  component:{
+    display: "flex",
+    margin: "55px 130px 0 130px",
+    justifyContent: "space-between",
+    [theme.breakpoints.down('md')]:{
+      marginLeft :"0px",
+    }
+  }
+}));
 const container = {
     padding : "12px 8px",
     textAlign : "center",
@@ -18,8 +24,9 @@ const text = {
     fontFamily : "inherit",
 }
 const Navbar = () =>{
+    const classes = useStyles();
    return(
-      <Box style = {component}>
+      <Box style = {{overflow : "hidden"}} className={classes.component}>
         {
             navData.map(data =>(
                 <Box style = {container} >
